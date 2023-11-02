@@ -47,14 +47,14 @@ const HeroBurger = () => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
+          onTouchStart={handleStartPress}
+          onTouchEnd={handleEndPress}
+          onMouseDown={handleStartPress}
+          onMouseUp={handleEndPress}
+          onMouseLeave={handleEndPress}
         >
           <Image
-            onTouchStart={handleStartPress}
-            onTouchEnd={handleEndPress}
-            onMouseDown={handleStartPress}
-            onMouseUp={handleEndPress}
-            onMouseLeave={handleEndPress}
-            className="w-[95%] max-w-[550px] lg:w-[550px] translate-y-[10px] lg:translate-y-[60px] cursor-grab"
+            className="w-[95%] max-w-[550px] lg:w-[550px] translate-y-[10px] lg:translate-y-[60px] cursor-grab pointer-events-none"
             height={1000}
             width={1000}
             alt="Burger picture"
