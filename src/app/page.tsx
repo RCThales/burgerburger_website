@@ -1,9 +1,8 @@
-import Contact from '@/components/contact/Contact'
-import GrindDaily from '@/components/grinddaily/GrindDaily'
-import Hero from '@/components/hero/Hero'
-import Location from '@/components/location/Location'
-import Navbar from '@/components/navbar/Navbar'
-
+import Contact from "@/components/contact/Contact";
+import GrindDaily from "@/components/grinddaily/GrindDaily";
+import Hero from "@/components/hero/Hero";
+import Location from "@/components/location/Location";
+import Navbar from "@/components/navbar/Navbar";
 
 export default function Home() {
   return (
@@ -13,7 +12,6 @@ export default function Home() {
       <GrindDaily></GrindDaily>
       <Location></Location>
       <Contact></Contact>
-
     </main>
-  )
+  );
 }

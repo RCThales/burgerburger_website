@@ -81,7 +81,7 @@ const Navbar = () => {
       >
         <div className="max-w-screen-xl flex flex-wrap h-full items-center justify-between mx-auto p-4 ">
           <Link href="/" className="flex items-center">
-            <span className="self-center text-lg text-center hover:scale-105 uppercase transition-all font-semibold whitespace-nowrap flex items-center gap-2 dark:text-white">
+            <span className="self-center text-lg text-center uppercase transition-all font-semibold whitespace-nowrap flex items-center gap-2">
               <span className="bb_logo text-2xl translate-y-2">BURGER</span>
               <Image
                 src={
@@ -100,7 +100,7 @@ const Navbar = () => {
             onClick={toggleNavbar}
             data-collapse-toggle="navbar-default"
             type="button"
-            className="inline-flex items-center w-10 justify-center text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-zinc-200 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:focus:ring-zinc-600"
+            className="inline-flex items-center w-10 justify-center text-sm rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-zinc-200"
             aria-controls="navbar-default"
             aria-expanded="false"
           >
