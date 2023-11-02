@@ -85,7 +85,7 @@ const Contact = () => {
                   htmlFor="email"
                   className="block text-gray-50 text-sm font-bold mb-2 "
                 >
-                  Email*
+                  Email* (Required)
                 </label>
                 <Field
                   type="email"
@@ -108,16 +108,25 @@ const Contact = () => {
                   htmlFor="message"
                   className="block text-gray-50 text-sm font-bold mb-2"
                 >
-                  Message*
+                  Message* (Required)
                 </label>
                 <Field
                   as="textarea"
                   id="message"
                   name="message"
                   rows="4"
-                  className="w-full border rounded-xl text-zinc-900 py-1 px-3 bg-gray-100"
+                  className={`w-full border rounded-xl text-zinc-900 py-1 px-3 bg-gray-100 ${
+                    errors.message && touched.message
+                      ? "border-red-500" // Apply red border for validation error
+                      : ""
+                  }`}
                 />
 
+                {errors.message && touched.message && (
+                  <div className="text-red-500 text-sm mt-1">
+                    {errors.message}
+                  </div>
+                )}
                 <div className="flex justify-start items-center mb-2 mt-2 gap-6 w-full">
                   <a
                     target="_blank"

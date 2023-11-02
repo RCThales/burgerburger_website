@@ -23,9 +23,9 @@ const BurgerModel = () => {
 
   useFrame(() => {
     // Dynamically scale based on screen width
-    const scaleFactor = isScreenWide ? 1.1 : 1.05;
+    const scaleFactor = isScreenWide ? 1 : 0.95;
     group.current.scale.set(scaleFactor, scaleFactor, scaleFactor);
-    group.current.position.y = isScreenWide ? -.8 : -1.3; // Adjust the value as needed
+    group.current.position.y = isScreenWide ? -.8 : -1; // Adjust the value as needed
     group.current.rotation.y += Math.PI / 700;
   });
 
@@ -33,7 +33,7 @@ const BurgerModel = () => {
     <group ref={group}>
       <primitive
         object={scene}
-        scale={[68, 75, 68]}
+        scale={[68, 78, 68]}
         position={[-1.7, -3.5, -0.5]}
       />
     </group>
@@ -66,7 +66,10 @@ const Burger = () => (
 );
 
 const Burger3D = () => (
-  <Canvas camera={{ position: [9, -1, -5] }}>
+  <Canvas
+    style={{ height: "100%", width: "100%" }}
+    camera={{ position: [9, -1, -5] }}
+  >
     <OrbitControls enablePan={false} enableZoom={false} />
     <pointLight
       position={[2, 1, 4]} // Right above the burger
@@ -84,8 +87,8 @@ const Burger3D = () => (
       intensity={35} // Increase intensity for a stronger effect
       color="white" // Warm yellow color
     />
-    <ambientLight intensity={.7} color="#FFD700" />
-    <Burger />
+    <ambientLight intensity={0.7} color="#FFD700" />
+    <Burger/>
   </Canvas>
 );
 
