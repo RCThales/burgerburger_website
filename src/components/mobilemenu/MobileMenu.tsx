@@ -8,7 +8,6 @@ import Link from "next/link";
 import useMobileMenuStore from "../../stores/mobileMenuStore"; // Adjust the path accordingly
 
 const MobileMenu = () => {
-  //const [pageNum, setPageNum] = useState(1);
   const [openMenu, setOpenMenu] = useState(false);
   const { open, pageNum, setOpen, setPageNum } = useMobileMenuStore();
 
@@ -50,7 +49,8 @@ const MobileMenu = () => {
         onClick={toggleNavbar}
         data-collapse-toggle="navbar-default"
         type="button"
-        className="inline-flex items-center absolute right-4 w-10 justify-center text-sm rounded-lg md:hidden hover:bg-zinc-900 transition-all  focus:outline-none focus:ring-2 focus:ring-zinc-200"
+        className="items-center absolute right-4 w-10 justify-center text-sm rounded-lg md:hidden
+         hover:bg-zinc-900 transition-all flex focus:outline-none focus:ring-2 focus:ring-zinc-200"
         aria-controls="navbar-default"
         aria-expanded="false"
       >
@@ -79,7 +79,7 @@ const MobileMenu = () => {
                 </button>
                 <ul
                   className="font-medium h-screen w-screen md:h-[70px] items-center flex flex-col
-           justify-start py-24 gap-10 md:p-0 border border-gray-100 rounded-l md:flex-row text-lg
+           justify-start py-24 gap-10 md:p-0 border border-gray-100 rounded-l md:flex-row text-3xl
             md:space-x-8 md:mt-0 md:border-0 rounded-lg bg-gray-50 md:bg-transparent dark:md:bg-transparent dark:border-gray-700"
                 >
                   <li>
@@ -103,24 +103,25 @@ const MobileMenu = () => {
                   </li>
                   <li>
                     <Link
-                      href="/#location"
-                      onClick={toggleNavbar}
-                      className="py-2 pl-3 pr-4 bg-[#2F2E2E] w-[85vw] h-14 flex justify-center items-center text-center  text-zinc-50  rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
-                      aria-current="page"
-                    >
-                      LOCATION
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
                       href="/menu"
                       onClick={toggleNavbar}
-                      className="py-2 pl-3 pr-4  bg-[#595959] w-[85vw] h-14 flex justify-center items-center text-center text-zinc-50  rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
+                      className="py-2 pl-3 pr-4   bg-[#2F2E2E]  w-[85vw] h-14 flex justify-center items-center text-center text-zinc-50  rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
                       aria-current="page"
                     >
                       MENU
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      href="/#location"
+                      onClick={toggleNavbar}
+                      className="py-2 pl-3 pr-4 bg-[#595959] w-[85vw] h-14 flex justify-center items-center text-center  text-zinc-50  rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
+                      aria-current="page"
+                    >
+                      LOCATION
+                    </Link>
+                  </li>
+
                   <li>
                     <Link
                       href="/#contact"
@@ -155,7 +156,7 @@ const MobileMenu = () => {
                 </button>
                 <ul
                   className="font-medium h-screen w-screen md:h-[70px] items-center flex flex-col
-           justify-start py-24 gap-10 md:p-0 border border-gray-100 rounded-l md:flex-row text-lg
+           justify-start py-24 gap-10 md:p-0 border border-gray-100 rounded-l md:flex-row text-3xl
             md:space-x-8 md:mt-0 md:border-0 rounded-lg bg-gray-50 md:bg-transparent dark:md:bg-transparent dark:border-gray-700"
                 >
                   <li>
@@ -202,10 +203,10 @@ const MobileMenu = () => {
 
                 <ul
                   className="font-medium h-screen w-screen md:h-[70px] items-center flex flex-col
-           justify-start py-24 gap-10 md:p-0 border border-gray-100 rounded-l md:flex-row text-lg overflow-y-auto
+           justify-start py-24 gap-10 md:p-0 border border-gray-100 rounded-l md:flex-row text-3xl overflow-y-auto
             md:space-x-8 md:mt-0 md:border-0 rounded-lg bg-gray-50 md:bg-transparent dark:md:bg-transparent dark:border-gray-700"
                 >
-                  <h3 className="text-center text-zinc-900 text-3xl">
+                  <h3 className="text-center text-zinc-900 text-3xl font-bold">
                     DELIVERY
                   </h3>
                   <li>
@@ -263,10 +264,10 @@ const MobileMenu = () => {
 
                 <ul
                   className="font-medium h-screen w-screen md:h-[70px] items-center flex flex-col
-           justify-start py-24 gap-10 md:p-0 border border-gray-100 rounded-l md:flex-row text-lg overflow-y-auto
+           justify-start py-24 gap-10 md:p-0 border border-gray-100 rounded-l md:flex-row text-3xl overflow-y-auto
             md:space-x-8 md:mt-0 md:border-0 rounded-lg bg-gray-50 md:bg-transparent dark:md:bg-transparent dark:border-gray-700"
                 >
-                  <h3 className="text-center text-zinc-900 text-3xl">
+                  <h3 className="text-center text-zinc-900 text-3xl font-bold">
                     PICK UP
                   </h3>
                   <li>

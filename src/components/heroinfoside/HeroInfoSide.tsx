@@ -1,8 +1,14 @@
 "use client";
+import { Blinker } from "next/font/google";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import useMobileMenuStore from "../../stores/mobileMenuStore"; // Adjust the path accordingly
+
+const blinker = Blinker({
+  subsets: ["latin"],
+  weight: ["200", "400", "600", "700"],
+});
 
 const HeroInfoSide = () => {
   const { open, setOpen, setPageNum } = useMobileMenuStore();
@@ -30,7 +36,7 @@ const HeroInfoSide = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="responsive_title text-center w-full text-zinc-950 pointer-events-none font-semibold"
+            className="responsive_title text-center w-full text-zinc-950 pointer-events-none font-bold "
           >
             BURGER BURGER!
           </motion.strong>
@@ -47,7 +53,7 @@ const HeroInfoSide = () => {
             onClick={openOrderMenu}
             className="rounded-xl w-[80vw] lg:max-w-[40vw] h-[60px] flex justify-center items-center text-center hover:scale-[1.02]  active:scale-[.95] bg-[#D43300]  p-2 transition-all"
           >
-            ORDER NOW
+            <span className={blinker.className}>ORDER NOW</span>
           </button>
         </motion.div>
 
@@ -62,7 +68,7 @@ const HeroInfoSide = () => {
             href="/menu"
             className="rounded-xl w-[80vw] text-center  h-[60px] flex justify-center items-center lg:max-w-[40vw] hover:scale-[1.02] active:scale-[.95] bg-[#D43300]  p-2 transition-all"
           >
-            MENU
+            <span className={blinker.className}>MENU</span>
           </Link>
         </motion.div>
       </div>

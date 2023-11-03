@@ -14,7 +14,7 @@ const GrindDaily = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0 }}
-          className="w-[55%] px-10 text-xl lg:text-3xl text-zinc-50 flex justify-center items-center"
+          className="w-[55%] px-10 text-2xl md:text-3xl lg:text-5xl font-semibold text-zinc-50 flex justify-center items-center"
         >
           WE GRIND ALL OUR BEEF FRESH IN HOUSE DAILY!
         </motion.span>

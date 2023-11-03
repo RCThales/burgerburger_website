@@ -1,9 +1,12 @@
 import type { Metadata } from 'next'
-import { Oswald } from 'next/font/google'
+import { Big_Shoulders_Display } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/navbar/Navbar';
 
-const oswald = Oswald({ subsets: ["latin"] , weight: ['200', '400', '600', '700']});
+const bigShoulders = Big_Shoulders_Display({
+  subsets: ["latin"],
+  weight: ["200", "400", "600", "700"],
+});
 
 export const metadata: Metadata = {
   title: 'BURGER BURGER',
@@ -18,7 +21,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={oswald.className}>
+      <body className={bigShoulders.className}>
         <Navbar></Navbar>
         {children}
       </body>

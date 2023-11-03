@@ -12,10 +12,10 @@ const Location = () => {
       >
         <div className="h-[90%] w-[90%] flex justify-evenly flex-col items-center bg-[#F5F4F4] rounded-2xl z-[1] py-10">
           <div className="w-screen relative pointer-events-none">
-            <h2 className="text-zinc-900 text-center z-50 responsive_title">
+            <h2 className="text-zinc-900 text-center z-50 responsive_subtitle font-semibold">
               LOCATION
             </h2>
-            <div className=" h-6 w-[90%] bg-gray-300 shadow-gray-500 shadow-md z-[-1] absolute overflow-hidden top-[50%] rounded-l-full right-0"></div>
+            <div className=" h-6 w-[90%] bg-gray-300 shadow-[0_10px_8px_-10px_rgba(0,0,0,.8)] z-[-1] absolute overflow-hidden top-[55%] rounded-l-full right-0"></div>
           </div>
 
           <iframe
@@ -32,7 +32,6 @@ const Location = () => {
           </div>
         </div>
       </section>
-
     </div>
   );
 };
