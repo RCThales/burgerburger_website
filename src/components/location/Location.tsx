@@ -1,7 +1,6 @@
 import React from "react";
 
 import { FiMapPin } from "react-icons/fi";
-import Burger3D from "../burger3d/Burger3D";
 
 const Location = () => {
   return (
