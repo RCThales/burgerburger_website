@@ -39,6 +39,13 @@ const HeroBurger = () => {
     };
   }, []);
 
+  const handleTouchMove = (event: React.TouchEvent<HTMLDivElement>) => {
+    // Check if there is significant movement (e.g., zooming)
+    if (Math.abs(event.touches[0].clientX - event.touches[1].clientX) > 5) {
+      cancelPressTimer();
+    }
+  };
+
   return (
     <>
       {isLoading && <LoadingIndicator />}
@@ -49,6 +56,7 @@ const HeroBurger = () => {
           transition={{ duration: 0.5, delay: 0.6 }}
           onTouchStart={handleStartPress}
           onTouchEnd={handleEndPress}
+          onTouchMove={handleTouchMove}
           onMouseDown={handleStartPress}
           onMouseUp={handleEndPress}
           onMouseLeave={handleEndPress}
