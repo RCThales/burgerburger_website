@@ -1,8 +1,9 @@
 import type { Metadata } from 'next'
 import { Oswald } from 'next/font/google'
 import './globals.css'
+import Navbar from '@/components/navbar/Navbar';
 
-const bebas = Oswald({ subsets: ["latin"] , weight: ['200', '400', '600', '700']});
+const oswald = Oswald({ subsets: ["latin"] , weight: ['200', '400', '600', '700']});
 
 export const metadata: Metadata = {
   title: 'BURGER BURGER',
@@ -16,9 +17,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-
-    <html lang="en">
-      <body className={bebas.className}>{children}</body>
+    <html className={oswald.className} lang="en">
+      <Navbar></Navbar>
+      <body>{children}</body>
     </html>
   );
 }
