@@ -19,11 +19,11 @@ const GrindDaily = () => {
           WE GRIND ALL OUR BEEF FRESH IN HOUSE DAILY!
         </motion.span>
         <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: 50, y: -20 }}
+          whileInView={{ opacity: 1, x: 0, y: -20 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="w-[45%] bg-gray-300 h-[150px] translate-y-[-20px] rounded-l-full shadow-md shadow-black relative flex justify-center items-center"
+          className="w-[45%] bg-gray-300 h-[150px] rounded-l-full shadow-md shadow-black relative flex justify-center items-center"
         >
           <Image
             className="w-[100%] h-auto scale-[1.8] max-w-[200px] translate-x-5 translate-y-8 absolute left-0 object-cover"

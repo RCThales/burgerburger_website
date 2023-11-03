@@ -1,5 +1,5 @@
 // mobileMenuStore.js
-import create from 'zustand';
+import { create } from 'zustand'
 
 const useMobileMenuStore = create((set) => ({
   open: false,
