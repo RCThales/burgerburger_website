@@ -229,7 +229,7 @@ const OrderPage = () => {
                 Begin your burger adventure here!{" "}
               </span>{" "}
               <br />
-              <br /> savour the flavor of our fresh meat burgers for a
+              <br />Savour the flavor of our fresh meat burgers for a
               delicious, juicy bite!
             </p>
 
