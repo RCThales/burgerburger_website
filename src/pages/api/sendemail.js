@@ -25,7 +25,7 @@ export default async function handler(req, res) {
   // Email content
   const mailOptions = {
     from: email,
-    to: "canadathales@gmail.com",
+    to: process.env.EMAIL_USER,
     subject: "BURGER BURGER WEBSITE FORM",
     html: `
       <p><strong>Name:</strong> ${firstName} ${lastName}</p>

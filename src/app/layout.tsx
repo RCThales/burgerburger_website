@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Big_Shoulders_Display } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/navbar/Navbar';
+import Footer from '@/components/footer/Footer';
 
 const bigShoulders = Big_Shoulders_Display({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={bigShoulders.className}>
         <Navbar></Navbar>
         {children}
+        <Footer></Footer>
       </body>
     </html>
   );

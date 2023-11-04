@@ -48,13 +48,14 @@ const HeroInfoSide = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          {" "}
-          <button
-            onClick={openOrderMenu}
-            className="rounded-xl w-[80vw] lg:max-w-[40vw] h-[60px] flex justify-center items-center text-center hover:scale-[1.02]  active:scale-[.95] bg-[#D43300]  p-2 transition-all"
+          
+          {/* DESKTOP */}
+          <Link
+            href={"/order"}
+            className="rounded-xl w-[80vw] lg:max-w-[40vw] flex h-[60px] justify-center items-center text-center hover:scale-[1.02]  active:scale-[.95] bg-[#D43300]  p-2 transition-all"
           >
             <span className={blinker.className}>ORDER NOW</span>
-          </button>
+          </Link>
         </motion.div>
 
         <motion.div

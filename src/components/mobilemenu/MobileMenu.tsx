@@ -1,8 +1,7 @@
 "use client";
 import React, { useEffect, useState, useRef } from "react";
-import { MdOutlineClose, MdArrowBackIosNew } from "react-icons/md";
+import { MdOutlineClose } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { FiPhone } from "react-icons/fi";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import useMobileMenuStore from "../../stores/mobileMenuStore"; // Adjust the path accordingly
@@ -16,10 +15,6 @@ const MobileMenu = () => {
   const toggleNavbar = () => {
     setOpen(!open);
     setPageNum(1);
-  };
-
-  const changePage = (page: number) => {
-    setPageNum(page);
   };
 
   const toggleNavbarOut = () => {
@@ -93,13 +88,14 @@ const MobileMenu = () => {
                     </Link>
                   </li>
                   <li>
-                    <button
-                      onClick={() => changePage(2)}
+                    <Link
+                      href={"/order"}
+                      onClick={toggleNavbar}
                       className="py-2 pl-3 pr-4 bg-[#595959] w-[85vw] h-14 flex justify-center items-center text-center  text-zinc-50   rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
                       aria-current="page"
                     >
                       ORDER NOW
-                    </button>
+                    </Link>
                   </li>
                   <li>
                     <Link
@@ -131,184 +127,6 @@ const MobileMenu = () => {
                     >
                       CONTACT US
                     </Link>
-                  </li>
-                </ul>
-              </div>
-            )}
-
-            {pageNum === 2 && (
-              <div
-                className="w-screen h-[100vh] fixed top-0 left-0 md:block md:w-auto  navbar_mobile"
-                id="navbar-default"
-                ref={navbarToggle}
-              >
-                <button
-                  onClick={() => changePage(1)}
-                  className="absolute top-6 left-6 text-black text-3xl"
-                >
-                  <MdArrowBackIosNew></MdArrowBackIosNew>
-                </button>
-                <button
-                  onClick={toggleNavbar}
-                  className="absolute top-6 right-6 text-black text-3xl"
-                >
-                  <MdOutlineClose></MdOutlineClose>
-                </button>
-                <ul
-                  className="font-medium h-screen w-screen md:h-[70px] items-center flex flex-col
-           justify-start py-24 gap-10 md:p-0 border border-gray-100 rounded-l md:flex-row text-3xl
-            md:space-x-8 md:mt-0 md:border-0 rounded-lg bg-gray-50 md:bg-transparent dark:md:bg-transparent dark:border-gray-700"
-                >
-                  <li>
-                    <button
-                      onClick={() => changePage(3)}
-                      className="py-2 pl-3 pr-4 bg-[#2F2E2E] w-[85vw] h-14 flex justify-center items-center text-center text-zinc-50 rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
-                      aria-current="page"
-                    >
-                      DELIVERY
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      onClick={() => changePage(4)}
-                      className="py-2 pl-3 pr-4 bg-[#595959] w-[85vw] h-14 flex justify-center items-center text-center text-zinc-50 rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
-                      aria-current="page"
-                    >
-                      PICK UP
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            )}
-
-            {/* DELIVERY */}
-            {pageNum === 3 && (
-              <div
-                className="w-screen h-[100vh] fixed top-0 left-0 md:block md:w-auto  navbar_mobile"
-                id="navbar-default"
-                ref={navbarToggle}
-              >
-                <button
-                  onClick={() => changePage(2)}
-                  className="absolute top-6 left-6 text-black text-3xl"
-                >
-                  <MdArrowBackIosNew></MdArrowBackIosNew>
-                </button>
-                <button
-                  onClick={toggleNavbar}
-                  className="absolute top-6 right-6 text-black text-3xl"
-                >
-                  <MdOutlineClose></MdOutlineClose>
-                </button>
-
-                <ul
-                  className="font-medium h-screen w-screen md:h-[70px] items-center flex flex-col
-           justify-start py-24 gap-10 md:p-0 border border-gray-100 rounded-l md:flex-row text-3xl overflow-y-auto
-            md:space-x-8 md:mt-0 md:border-0 rounded-lg bg-gray-50 md:bg-transparent dark:md:bg-transparent dark:border-gray-700"
-                >
-                  <h3 className="text-center text-zinc-900 text-3xl font-bold">
-                    DELIVERY
-                  </h3>
-                  <li>
-                    <Link
-                      target="_blank"
-                      href="https://www.doordash.com/en-CA/store/burger-burger-london-25113744/"
-                      onClick={() => setPageNum(1)}
-                      className="bg-[url(https://burgerburger.s3.us-east-2.amazonaws.com/doordash.png)] bg-center bg-cover py-2 pl-3 pr-4 bg-[#2F2E2E] w-[85vw] h-36 flex justify-center items-center text-center  text-zinc-50  rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
-                      aria-current="page"
-                    ></Link>
-                  </li>
-                  <li>
-                    <Link
-                      target="_blank"
-                      href="https://www.ubereats.com/ca/store/burger-burger/5R6qqruVTGiSDkhDLm2KYA"
-                      onClick={() => setPageNum(1)}
-                      className="bg-[url(https://burgerburger.s3.us-east-2.amazonaws.com/ubereats.png)] bg-center bg-cover py-2 pl-3 pr-4 bg-[#595959] w-[85vw] h-36 flex justify-center items-center text-center  text-zinc-50 rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
-                      aria-current="page"
-                    ></Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      target="_blank"
-                      href="https://www.skipthedishes.com/burger-burger"
-                      onClick={() => setPageNum(1)}
-                      className="bg-[url(https://burgerburger.s3.us-east-2.amazonaws.com/skipthedishes.png)] bg-center bg-cover py-2 pl-3 pr-4 bg-[#595959] w-[85vw] h-36 flex justify-center items-center text-center  text-zinc-50 rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
-                      aria-current="page"
-                    ></Link>
-                  </li>
-                </ul>
-              </div>
-            )}
-
-            {/* PICK UP */}
-            {pageNum === 4 && (
-              <div
-                className="w-screen h-[100vh] fixed top-0 left-0 md:block md:w-auto  navbar_mobile"
-                id="navbar-default"
-                ref={navbarToggle}
-              >
-                <button
-                  onClick={() => changePage(2)}
-                  className="absolute top-6 left-6 text-black text-3xl"
-                >
-                  <MdArrowBackIosNew></MdArrowBackIosNew>
-                </button>
-
-                <button
-                  onClick={toggleNavbar}
-                  className="absolute top-6 right-6 text-black text-3xl"
-                >
-                  <MdOutlineClose></MdOutlineClose>
-                </button>
-
-                <ul
-                  className="font-medium h-screen w-screen md:h-[70px] items-center flex flex-col
-           justify-start py-24 gap-10 md:p-0 border border-gray-100 rounded-l md:flex-row text-3xl overflow-y-auto
-            md:space-x-8 md:mt-0 md:border-0 rounded-lg bg-gray-50 md:bg-transparent dark:md:bg-transparent dark:border-gray-700"
-                >
-                  <h3 className="text-center text-zinc-900 text-3xl font-bold">
-                    PICK UP
-                  </h3>
-                  <li>
-                    <Link
-                      href="tel:+12266638955"
-                      target="_blank"
-                      onClick={() => setPageNum(1)}
-                      className="py-2 pl-3 pr-4 bg-[#88A861] w-[85vw] h-14 flex text-2xl justify-center items-center text-center  text-zinc-50 rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
-                      aria-current="page"
-                    >
-                      <FiPhone className={"text-2xl text-gray-50 mr-4"} />
-                      226-663-8955
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      target="_blank"
-                      href="https://www.doordash.com/en-CA/store/burger-burger-london-25113744/"
-                      onClick={() => setPageNum(1)}
-                      className="bg-[url(https://burgerburger.s3.us-east-2.amazonaws.com/doordash.png)] bg-center bg-cover py-2 pl-3 pr-4 bg-[#2F2E2E] w-[85vw] h-36 flex justify-center items-center text-center  text-zinc-50 rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
-                      aria-current="page"
-                    ></Link>
-                  </li>
-                  <li>
-                    <Link
-                      target="_blank"
-                      href="https://www.ubereats.com/ca/store/burger-burger/5R6qqruVTGiSDkhDLm2KYA"
-                      onClick={() => setPageNum(1)}
-                      className="bg-[url(https://burgerburger.s3.us-east-2.amazonaws.com/ubereats.png)] bg-center bg-cover py-2 pl-3 pr-4 bg-[#595959] w-[85vw] h-36 flex justify-center items-center text-center text-zinc-50  rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
-                      aria-current="page"
-                    ></Link>
-                  </li>
-
-                  <li>
-                    <Link
-                      target="_blank"
-                      href="https://www.skipthedishes.com/burger-burger"
-                      onClick={() => setPageNum(1)}
-                      className="bg-[url(https://burgerburger.s3.us-east-2.amazonaws.com/skipthedishes.png)] bg-center bg-cover py-2 pl-3 pr-4 bg-[#595959] w-[85vw] h-36 flex justify-center items-center text-center text-zinc-50  rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
-                      aria-current="page"
-                    ></Link>
                   </li>
                 </ul>
               </div>

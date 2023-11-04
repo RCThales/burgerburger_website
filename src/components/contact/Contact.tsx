@@ -63,14 +63,13 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="h-auto w-screen bg-gray-50 z-[1] flex justify-center items-center pt-10 pb-10"
+      className="h-auto w-screen bg-gray-50 z-[1] flex justify-center items-center pt-10 "
     >
-      <div className="h-[90%] w-[90%] flex justify-between flex-col items-center bg-zinc-800 rounded-2xl z-[5] py-10">
+      <div className="h-[90%] w-[90%] flex justify-between flex-col items-center bg-[#322E2E] rounded-2xl z-[5] py-10">
         <div className="w-screen relative">
-          <h2 className="text-gray-50 text-center z-50 responsive_subtitle font-semibold">
+          <h2 className="text-gray-50 text-center z-50 responsive_subtitle font-semibold bg-zinc-600 shadow-[0_10px_10px_-10px_rgba(0,0,0,.7)]">
             CONTACT US
           </h2>
-          <div className=" h-6 w-[90%] bg-zinc-600 shadow-[0_10px_10px_-10px_rgba(0,0,0,.7)] z-[-1] absolute overflow-hidden top-[55%] rounded-l-full right-0"></div>
         </div>
 
         <div className="flex flex-col lg:flex-row items-center justify-center h-auto lg:h-[600px] gap-10">
