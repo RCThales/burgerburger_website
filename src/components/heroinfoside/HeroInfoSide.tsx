@@ -48,11 +48,10 @@ const HeroInfoSide = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          
           {/* DESKTOP */}
           <Link
             href={"/order"}
-            className="rounded-xl w-[80vw] lg:max-w-[40vw] flex h-[60px] justify-center items-center text-center hover:scale-[1.02]  active:scale-[.95] bg-[#D43300]  p-2 transition-all"
+            className="rounded-xl w-[80vw]  text-xl lg:max-w-[40vw] flex h-[60px] justify-center items-center text-center hover:scale-[1.02]  active:scale-[.95] bg-[#D43300]  p-2 transition-all"
           >
             <span className={blinker.className}>ORDER NOW</span>
           </Link>
@@ -66,10 +65,10 @@ const HeroInfoSide = () => {
         >
           {" "}
           <Link
-            href="/menu"
-            className="rounded-xl w-[80vw] text-center  h-[60px] flex justify-center items-center lg:max-w-[40vw] hover:scale-[1.02] active:scale-[.95] bg-[#D43300]  p-2 transition-all"
+            href="#contact"
+            className="rounded-xl w-[80vw] text-xl text-center text-zinc-900  h-[60px] flex justify-center items-center lg:max-w-[40vw] hover:scale-[1.02] active:scale-[.95] border-2 bg-[#D9D9D9]  p-2 transition-all"
           >
-            <span className={blinker.className}>MENU</span>
+            <span className={blinker.className}>CONTACT US</span>
           </Link>
         </motion.div>
       </div>
