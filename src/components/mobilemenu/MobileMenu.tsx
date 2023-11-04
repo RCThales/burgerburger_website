@@ -97,16 +97,7 @@ const MobileMenu = () => {
                       ORDER NOW
                     </Link>
                   </li>
-                  <li>
-                    <Link
-                      href="/menu"
-                      onClick={toggleNavbar}
-                      className="py-2 pl-3 pr-4   bg-[#2F2E2E]  w-[85vw] h-14 flex justify-center items-center text-center text-zinc-50  rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
-                      aria-current="page"
-                    >
-                      MENU
-                    </Link>
-                  </li>
+  
                   <li>
                     <Link
                       href="/#location"

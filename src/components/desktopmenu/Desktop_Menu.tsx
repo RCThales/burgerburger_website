@@ -26,15 +26,7 @@ const Desktop_Menu = () => {
               ORDER NOW
             </Link>
           </li>
-          <li>
-            <Link
-              href="/menu"
-              className="py-2 pl-3 pr-4 flex justify-center items-center text-center  text-zinc-50 rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
-              aria-current="page"
-            >
-              MENU
-            </Link>
-          </li>
+
           <li>
             <Link
               href="#location"

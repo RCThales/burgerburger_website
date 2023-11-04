@@ -25,7 +25,7 @@ export default function RootLayout({
       <body className={bigShoulders.className}>
         <Navbar></Navbar>
         {children}
-        <Footer></Footer>
+  
       </body>
     </html>
   );

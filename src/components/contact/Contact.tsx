@@ -72,7 +72,7 @@ const Contact = () => {
           </h2>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-center h-auto lg:h-[600px] gap-10">
+        <div className="flex flex-col lg:flex-row items-center justify-center h-auto lg:h-[600px] gap-0 lg:gap-10 relative">
           {!emailSent ? (
             <Formik
               initialValues={initialValues}
@@ -198,8 +198,8 @@ const Contact = () => {
               )}
             </Formik>
           ) : (
-            <div className="flex flex-col justify-center items-center">
-              <h4 className="responsive_subtitle pt-20 lg:pt-0 pb-3">
+            <div className="flex flex-col justify-center items-center ">
+              <h4 className="responsive_subtitle pt-20 lg:pt-0 pb-3 ">
                 Thank you for the message!
               </h4>
 
@@ -210,11 +210,18 @@ const Contact = () => {
           )}
 
           <Image
+            src="https://burgerburger.s3.us-east-2.amazonaws.com/bb_full_logo.png"
+            height={800}
+            width={800}
+            alt={"Burger Burger logo cut in half."}
+            className="translate-y-[0] lg:-translate-y-10 max-w-[280px] hidden lg:flex"
+          ></Image>
+          <Image
             src="https://burgerburger.s3.us-east-2.amazonaws.com/bb_logo_cut.png"
             height={800}
             width={800}
             alt={"Burger Burger logo cut in half."}
-            className="translate-y-10 lg:translate-y-0 max-w-[280px]"
+            className="translate-y-[20%] lg:-translate-y-10 max-w-[280px] flex lg:hidden"
           ></Image>
         </div>
       </div>
