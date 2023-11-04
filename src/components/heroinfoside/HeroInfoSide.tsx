@@ -53,7 +53,9 @@ const HeroInfoSide = () => {
             href={"/order"}
             className="rounded-xl w-[80vw]  text-xl lg:max-w-[40vw] flex h-[60px] justify-center items-center text-center hover:scale-[1.02]  active:scale-[.95] bg-[#D43300]  p-2 transition-all"
           >
-            <span className={blinker.className}>ORDER NOW</span>
+            <span className={`${blinker.className} text-zinc-50`}>
+              ORDER NOW
+            </span>
           </Link>
         </motion.div>
 
@@ -68,7 +70,9 @@ const HeroInfoSide = () => {
             href="#contact"
             className="rounded-xl w-[80vw] text-xl text-center text-zinc-900  h-[60px] flex justify-center items-center lg:max-w-[40vw] hover:scale-[1.02] active:scale-[.95] border-2 bg-[#D9D9D9]  p-2 transition-all"
           >
-            <span className={blinker.className}>CONTACT US</span>
+            <span className={`${blinker.className} text-zinc-900`}>
+              CONTACT US
+            </span>
           </Link>
         </motion.div>
       </div>

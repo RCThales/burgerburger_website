@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 const GrindDaily = () => {
   return (
-    <section className="pt-20 lg:pt-40 pb-10 bg-gray-50 overflow-hidden">
+    <section className="pt-14 lg:pt-10 pb-10 bg-gray-50 overflow-hidden">
       <div className="h-[150px] bg-[#322E2E] w-screen flex justify-center items-center gap-5">
         <motion.span
           initial={{ opacity: 0, x: -50 }}
