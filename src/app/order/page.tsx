@@ -224,10 +224,13 @@ const OrderPage = () => {
           </div>
         ) : (
           <div className="flex flex-col gap-20 w-[100%] text-xl lg:text-3xl text-center justify-center items-center flex-grow">
-            <p className={`${blinker.className}   max-w-[80vw]`}>
-              Begin your burger adventure here! <br />
-              <br /> savor the flavor of our fresh meat burgers for a delicious,
-              juicy bite!
+            <p className={`${blinker.className} text-zinc-50  max-w-[80vw]`}>
+              <span className="font-semibold text-2xl lg:text-4xl">
+                Begin your burger adventure here!{" "}
+              </span>{" "}
+              <br />
+              <br /> savour the flavor of our fresh meat burgers for a
+              delicious, juicy bite!
             </p>
 
             <div className="h-[220px]"></div>
