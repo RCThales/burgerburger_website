@@ -88,7 +88,7 @@ const OrderPage = () => {
                     className="flex flex-col justify-center items-center gap-6 text-xl"
                   >
                     <p className={`${blinker.className} translate-y-[30px]`}>
-                      YOU'RE JUST A CLICK AWAY!
+                      YOU&apos;RE JUST A CLICK AWAY!
                     </p>
                     <div
                       className={`rounded-xl w-[250px] h-[60px] flex justify-center items-center text-center hover:scale-[1.02]  text-2xl  active:scale-[.95]   p-2 transition-all`}
@@ -184,7 +184,7 @@ const OrderPage = () => {
                     className="flex flex-col justify-center items-center gap-6 text-xl"
                   >
                     <p className={`${blinker.className} translate-y-[30px]`}>
-                      YOU'RE JUST A CLICK AWAY!
+                      YOU&apos;RE JUST A CLICK AWAY!
                     </p>
                     <div
                       className={`rounded-xl w-[250px] h-[60px] flex justify-center items-center text-center hover:scale-[1.02]  text-2xl  active:scale-[.95]   p-2 transition-all`}
