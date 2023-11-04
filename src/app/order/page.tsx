@@ -71,157 +71,155 @@ const OrderPage = () => {
       <div className="w-screen flex flex-col justify-evenly gap-14 lg:gap-0 items-center  m-auto">
         {/* ORDER OPTIONS */}
         {startOrder ? (
-          <>
-            <div className="flex flex-col justify-center items-center gap-10 lg:gap-20">
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.1 }}
-                className="flex gap-10 w-[80%] justify-center items-center text-xl lg:hidden"
-              >
-                {typeOfOrder === "delivery" ? (
+          <div className="flex flex-col justify-center items-center gap-10 lg:gap-20">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.1 }}
+              className="flex gap-10 w-[80%] justify-center items-center text-xl lg:hidden"
+            >
+              {typeOfOrder === "delivery" ? (
+                <motion.div
+                  initial={{ opacity: 0, x: -1000 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.2, delay: 0 }}
+                  className="flex flex-col justify-center items-center gap-0 lg:gap-6 text-xl"
+                >
+                  <p className={`${blinker.className} translate-y-[30px]`}>
+                    YOU&apos;RE JUST A CLICK AWAY!
+                  </p>
+                  <div
+                    className={`rounded-xl w-[250px] h-[60px] flex justify-center items-center text-center hover:scale-[1.02]  text-2xl  active:scale-[.95]   p-2 transition-all`}
+                  ></div>
+                </motion.div>
+              ) : (
+                <div className="flex flex-col justify-center items-center gap-6 text-xl">
+                  <motion.p
+                    initial={{ opacity: 0, x: -1000 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.2, delay: 0 }}
+                    className={blinker.className}
+                  >
+                    YOU CAN GIVE US A CALL!
+                  </motion.p>
                   <motion.div
                     initial={{ opacity: 0, x: -1000 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.2, delay: 0 }}
-                    className="flex flex-col justify-center items-center gap-6 text-xl"
                   >
-                    <p className={`${blinker.className} translate-y-[30px]`}>
-                      YOU&apos;RE JUST A CLICK AWAY!
-                    </p>
-                    <div
-                      className={`rounded-xl w-[250px] h-[60px] flex justify-center items-center text-center hover:scale-[1.02]  text-2xl  active:scale-[.95]   p-2 transition-all`}
-                    ></div>
-                  </motion.div>
-                ) : (
-                  <div className="flex flex-col justify-center items-center gap-6 text-xl">
-                    <motion.p
-                      initial={{ opacity: 0, x: -1000 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.2, delay: 0 }}
-                      className={blinker.className}
+                    {" "}
+                    <Link
+                      href="tel:2266638955"
+                      className={`bg-[#88A861] rounded-xl w-[250px] h-[60px] flex justify-center items-center text-center hover:scale-[1.02]  text-2xl  active:scale-[.95]   p-2 transition-all`}
                     >
-                      YOU CAN GIVE US A CALL!
-                    </motion.p>
-                    <motion.div
-                      initial={{ opacity: 0, x: -1000 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.2, delay: 0 }}
-                    >
-                      {" "}
-                      <Link
-                        href="tel:2266638955"
-                        className={`bg-[#88A861] rounded-xl w-[250px] h-[60px] flex justify-center items-center text-center hover:scale-[1.02]  text-2xl  active:scale-[.95]   p-2 transition-all`}
+                      <span
+                        className={`flex gap-4 items-center justify-center text-3xl`}
                       >
-                        <span
-                          className={`flex gap-4 items-center justify-center text-3xl`}
-                        >
-                          <FiPhone></FiPhone> 226-663-8955
-                        </span>
-                      </Link>
-                    </motion.div>
-                  </div>
-                )}
+                        <FiPhone></FiPhone> 226-663-8955
+                      </span>
+                    </Link>
+                  </motion.div>
+                </div>
+              )}
+            </motion.div>
+
+            <div className="flex flex-col lg:flex-row gap-8 lg:gap-20 w-[100%] lg:w-[60%] justify-center items-center">
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+              >
+                <Link
+                  target="_blank"
+                  href="https://www.doordash.com/en-CA/store/burger-burger-london-25113744/"
+                  className="bg-[url(https://burgerburger.s3.us-east-2.amazonaws.com/doordash.png)] max-w-[70vw] hover:scale-[1.02] active:scale-95 lg:max-w-[300px] bg-center bg-cover py-2 pl-3 pr-4 bg-[#2F2E2E] w-[85vw] h-32 lg:h-44 flex justify-center items-center text-center  text-zinc-50  rounded-xl md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
+                  aria-current="page"
+                ></Link>
               </motion.div>
 
-              <div className="flex flex-col lg:flex-row gap-20 w-[100%] lg:w-[60%] justify-center items-center">
-                <motion.div
-                  initial={{ opacity: 0, y: -50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.1 }}
-                >
-                  <Link
-                    target="_blank"
-                    href="https://www.doordash.com/en-CA/store/burger-burger-london-25113744/"
-                    className="bg-[url(https://burgerburger.s3.us-east-2.amazonaws.com/doordash.png)] max-w-[70vw] hover:scale-[1.02] active:scale-95 lg:max-w-[300px] bg-center bg-cover py-2 pl-3 pr-4 bg-[#2F2E2E] w-[85vw] h-44 flex justify-center items-center text-center  text-zinc-50  rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
-                    aria-current="page"
-                  ></Link>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: -50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                >
-                  <Link
-                    target="_blank"
-                    href="https://www.ubereats.com/ca/store/burger-burger/5R6qqruVTGiSDkhDLm2KYA"
-                    className="bg-[url(https://burgerburger.s3.us-east-2.amazonaws.com/ubereats.png)] hover:scale-[1.02] active:scale-95 max-w-[70vw] lg:max-w-[300px]  bg-center bg-cover py-2 pl-3 pr-4 bg-[#595959] w-[85vw] h-44 flex justify-center items-center text-center  text-zinc-50 rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
-                    aria-current="page"
-                  ></Link>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, y: -50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.3 }}
-                >
-                  <Link
-                    target="_blank"
-                    href="https://www.skipthedishes.com/burger-burger"
-                    className="bg-[url(https://burgerburger.s3.us-east-2.amazonaws.com/skipthedishes.png)] max-w-[70vw] hover:scale-[1.02] active:scale-95 lg:max-w-[300px]  bg-center bg-cover py-2 pl-3 pr-4 bg-[#595959] w-[85vw] h-44 flex justify-center items-center text-center  text-zinc-50 rounded-lg md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
-                    aria-current="page"
-                  ></Link>
-                </motion.div>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <Link
+                  target="_blank"
+                  href="https://www.ubereats.com/ca/store/burger-burger/5R6qqruVTGiSDkhDLm2KYA"
+                  className="bg-[url(https://burgerburger.s3.us-east-2.amazonaws.com/ubereats.png)] hover:scale-[1.02] active:scale-95 max-w-[70vw] lg:max-w-[300px]  bg-center bg-cover py-2 pl-3 pr-4 bg-[#595959] w-[85vw]  h-32 lg:h-44 flex justify-center items-center text-center  text-zinc-50 rounded-xl md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
+                  aria-current="page"
+                ></Link>
+              </motion.div>
 
               <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.1 }}
-                className="gap-10 w-[80%] justify-center items-center text-xl hidden lg:flex"
+                initial={{ opacity: 0, y: -50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
               >
-                {typeOfOrder === "delivery" ? (
-                  <motion.div
-                    initial={{ opacity: 0, x: -1000 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.2, delay: 0 }}
-                    className="flex flex-col justify-center items-center gap-6 text-xl"
-                  >
-                    <p className={`${blinker.className} translate-y-[30px]`}>
-                      YOU&apos;RE JUST A CLICK AWAY!
-                    </p>
-                    <div
-                      className={`rounded-xl w-[250px] h-[60px] flex justify-center items-center text-center hover:scale-[1.02]  text-2xl  active:scale-[.95]   p-2 transition-all`}
-                    ></div>
-                  </motion.div>
-                ) : (
-                  <div className="flex flex-col justify-center items-center gap-6 text-xl">
-                    <motion.p
-                      initial={{ opacity: 0, x: -1000 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.2, delay: 0 }}
-                      className={blinker.className}
-                    >
-                      YOU CAN GIVE US A CALL!
-                    </motion.p>
-                    <motion.div
-                      initial={{ opacity: 0, x: -1000 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.2, delay: 0 }}
-                    >
-                      {" "}
-                      <Link
-                        href="tel:2266638955"
-                        className={`bg-[#88A861] rounded-xl w-[250px] h-[60px] flex justify-center items-center text-center hover:scale-[1.02]  text-2xl  active:scale-[.95]   p-2 transition-all`}
-                      >
-                        <span
-                          className={`flex gap-4 items-center justify-center text-3xl`}
-                        >
-                          <FiPhone></FiPhone> 226-663-8955
-                        </span>
-                      </Link>
-                    </motion.div>
-                  </div>
-                )}
+                <Link
+                  target="_blank"
+                  href="https://www.skipthedishes.com/burger-burger"
+                  className="bg-[url(https://burgerburger.s3.us-east-2.amazonaws.com/skipthedishes.png)] max-w-[70vw] hover:scale-[1.02] active:scale-95 lg:max-w-[300px]  bg-center bg-cover py-2 pl-3 pr-4 bg-[#595959] w-[85vw]  h-32 lg:h-44 flex justify-center items-center text-center  text-zinc-50 rounded-xl md:bg-transparent hover:md:text-orange-500 transition-all md:p-0 "
+                  aria-current="page"
+                ></Link>
               </motion.div>
             </div>
-          </>
+
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.1 }}
+              className="gap-10 w-[80%] justify-center items-center text-xl hidden lg:flex"
+            >
+              {typeOfOrder === "delivery" ? (
+                <motion.div
+                  initial={{ opacity: 0, x: -1000 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.2, delay: 0 }}
+                  className="flex flex-col justify-center items-center gap-6 text-xl"
+                >
+                  <p className={`${blinker.className} translate-y-[40px]`}>
+                    YOU&apos;RE JUST A CLICK AWAY!
+                  </p>
+                  <div
+                    className={`rounded-xl w-[250px] h-[60px] flex justify-center items-center text-center hover:scale-[1.02]  text-2xl  active:scale-[.95]   p-2 transition-all`}
+                  ></div>
+                </motion.div>
+              ) : (
+                <div className="flex flex-col justify-center items-center gap-6 text-xl">
+                  <motion.p
+                    initial={{ opacity: 0, x: -1000 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.2, delay: 0 }}
+                    className={blinker.className}
+                  >
+                    YOU CAN GIVE US A CALL!
+                  </motion.p>
+                  <motion.div
+                    initial={{ opacity: 0, x: -1000 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.2, delay: 0 }}
+                  >
+                    {" "}
+                    <Link
+                      href="tel:2266638955"
+                      className={`bg-[#88A861] rounded-xl w-[250px] h-[60px] flex justify-center items-center text-center hover:scale-[1.02]  text-2xl  active:scale-[.95]   p-2 transition-all`}
+                    >
+                      <span
+                        className={`flex gap-4 items-center justify-center text-3xl`}
+                      >
+                        <FiPhone></FiPhone> 226-663-8955
+                      </span>
+                    </Link>
+                  </motion.div>
+                </div>
+              )}
+            </motion.div>
+          </div>
         ) : (
           <div className="flex flex-col gap-20 w-[100%] text-xl lg:text-3xl text-center justify-center items-center flex-grow">
             <p className={`${blinker.className}   max-w-[80vw]`}>
