@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Big_Shoulders_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
-import Head from "next/head";
 
 const bigShoulders = Big_Shoulders_Display({
   subsets: ["latin"],
@@ -12,6 +11,85 @@ const bigShoulders = Big_Shoulders_Display({
 export const metadata: Metadata = {
   title: "BURGER BURGER",
   description: "Burger Burger official website.",
+  openGraph: {
+    title: "Burger Burger",
+    description:
+      "Discover the mouthwatering world of BURGER BURGER, London Ontario's best burger joint. Indulge in our delicious menu and experience the perfect blend of flavors.",
+    url: "https://burgerburger.vercel.app/",
+    siteName: "Burger Burger",
+    images: [
+      {
+        url: "https://burgerburger.s3.us-east-2.amazonaws.com/banner_bb.png",
+        width: 800,
+        height: 600,
+      },
+      {
+        url: "https://burgerburger.s3.us-east-2.amazonaws.com/banner_bb.png",
+        width: 1800,
+        height: 1600,
+        alt: "Burger Burger banner.",
+      },
+    ],
+
+    locale: "en_CA",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "London Ontario's Best Burgers",
+    description:
+      "Indulge in the savory goodness of BURGER BURGER. London Ontario's premier burger joint with a digital twist.",
+    images: ["https://burgerburger.s3.us-east-2.amazonaws.com/banner_bb.png"],
+  },
+  verification: {
+    google: "google",
+    yandex: "yandex",
+    yahoo: "yahoo",
+    other: {
+      me: ["my-email", "my-link"],
+    },
+  },
+  appleWebApp: {
+    title: "Burger Burgert Apple Web App",
+    statusBarStyle: "black-translucent",
+    startupImage: [
+      "https://burgerburger.s3.us-east-2.amazonaws.com/banner_bb.png",
+      {
+        url: "https://burgerburger.s3.us-east-2.amazonaws.com/banner_bb.png",
+        media: "(device-width: 768px) and (device-height: 1024px)",
+      },
+    ],
+  },
+  category: "food",
+  creator: "Thales Cardoso and Rayssa Ruas",
+  keywords: [
+    "Burger Burger",
+    "burgers",
+    "london",
+    "ontario",
+    "canada",
+    "london ontario",
+    "foodie",
+    "discounts",
+    "chicken",
+    "richmond",
+    "students",
+    "western",
+    "burger joint",
+  ],
 };
 
 export default function RootLayout({
@@ -21,42 +99,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Head>
-        <meta
-          name="description"
-          content="Discover the mouthwatering world of BURGER BURGER, London Ontario's best burger joint. Indulge in our delicious menu and experience the perfect blend of flavors."
-        />
-        <meta
-          name="keywords"
-          content="BURGER BURGER, burgers, London, Ontario, fast food, delicious, foodie, BB, poutine, chicken, topbun, richmond, burger joint"
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-          property="og:title"
-          content="BURGER BURGER - London Ontario's Best Burgers"
-        />
-        <meta
-          property="og:description"
-          content="Indulge in the savory goodness of BURGER BURGER. London's premier burger joint with a digital twist."
-        />
-        <meta
-          property="og:image"
-          content="https://burgerburger.s3.us-east-2.amazonaws.com/banner_bb.png"
-        />
-        <meta property="og:url" content="https://burgerburger.vercel.app/" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="London Ontario's Best Burgers" />
-        <meta
-          name="twitter:description"
-          content="Indulge in the savory goodness of BURGER BURGER. London Ontario's premier burger joint with a digital twist."
-        />
-        <meta
-          name="twitter:image"
-          content="https://burgerburger.s3.us-east-2.amazonaws.com/banner_bb.png"
-        />
-      </Head>
       <body className={bigShoulders.className}>
         <Navbar></Navbar>
         {children}
