@@ -4,6 +4,7 @@
 [![React](https://img.shields.io/badge/React-%2320232a?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://reactjs.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-%231a202c?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-%233178c6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Amazon S3](https://img.shields.io/badge/Amazon%20S3-%23404d59?style=for-the-badge&logo=amazon-s3&logoColor=white)](https://aws.amazon.com/s3/)
 
 ## Overview
 
@@ -15,16 +16,12 @@ Burger Burger is a delightful website crafted with the latest technologies to pr
 - **React:** A JavaScript library for building user interfaces.
 - **Tailwind CSS:** A utility-first CSS framework for building modern designs.
 - **TypeScript:** A typed superset of JavaScript that adds static types.
+- **Amazon S3:** Scalable storage in the cloud.
 
 ## Design and UX
 
-The captivating design and user experience of Burger Burger were meticulously crafted by [Rayssa Ruas](#), using [Figma](https://www.figma.com/).
+The captivating design and user experience of Burger Burger were meticulously crafted by [Rayssa Ruas](https://rayssaruas.design), using [Figma](https://www.figma.com/).
 
-## Getting Started
-
-1. Clone the repository: `git clone https://github.com/your-username/burger-burger.git`
-2. Install dependencies: `npm install`
-3. Run the development server: `npm run dev`
 
 ## Website
 
