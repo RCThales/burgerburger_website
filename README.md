@@ -30,9 +30,6 @@ The captivating design and user experience of Burger Burger were meticulously cr
 
 Explore the live website: [![Website](https://img.shields.io/badge/Visit%20Website-%2341B883?style=for-the-badge)](https://burgerburger.vercel.app/)
 
-## Contributions
-
-Contributions are welcome! Please check out our [contribution guidelines](CONTRIBUTING.md).
 
 ## License
 
@@ -40,4 +37,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Feel free to fork, star, and contribute to make Burger Burger even more awesome! 🍔✨
+Feel free to star, and contribute to my GITHUB page! 🍔✨
