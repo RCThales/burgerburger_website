@@ -22,7 +22,7 @@ const OrderPage = () => {
   };
 
   return (
-    <section className="w-screen min-h-screen h-auto bg-[#322E2E] flex flex-col pb-10 lg:pb-0 relative">
+    <section className="w-screen min-h-screen h-auto bg-[#322E2E] flex flex-col pb-10 lg:pb-0 relative gap-10">
       {/* UPPER SECTION */}
       <div className="w-full gap-12 lg:gap-20 justify-center items-center flex flex-col pt-28 pb-10 lg:pt-32 lg:pb-0 ">
         <h2 className="text-zinc-50 text-center w-full z-50 text-3xl lg:text-5xl font-semibold p-2 lg:p-3 bg-[#575555] shadow-[0_10px_8px_-10px_rgba(0,0,0,.8)]">
@@ -184,7 +184,7 @@ const OrderPage = () => {
                   transition={{ duration: 0.2, delay: 0 }}
                   className="flex flex-col justify-center items-center gap-6 text-xl"
                 >
-                  <p className={`${blinker.className} translate-y-[40px]`}>
+                  <p className={`${blinker.className} translate-y-[40px] text-zinc-50`}>
                     YOU&apos;RE JUST A CLICK AWAY!
                   </p>
                   <div
@@ -197,7 +197,7 @@ const OrderPage = () => {
                     initial={{ opacity: 0, x: -1000 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.2, delay: 0 }}
-                    className={blinker.className}
+                    className={`${blinker.className} text-zinc-50`}
                   >
                     YOU CAN GIVE US A CALL!
                   </motion.p>
@@ -212,7 +212,7 @@ const OrderPage = () => {
                       className={`bg-[#88A861] rounded-xl w-[250px] h-[60px] flex justify-center items-center text-center hover:scale-[1.02]  text-2xl  active:scale-[.95]   p-2 transition-all`}
                     >
                       <span
-                        className={`flex gap-4 items-center justify-center text-3xl`}
+                        className={`flex gap-4 items-center justify-center text-3xl text-zinc-50`}
                       >
                         <FiPhone></FiPhone> 226-663-8955
                       </span>
