@@ -67,7 +67,7 @@ const Contact = () => {
     >
       <div className="h-[90%] w-[90%] flex justify-between flex-col items-center bg-[#322E2E] rounded-2xl z-[5] py-10">
         <div className="w-screen relative">
-          <h2 className="text-gray-50 text-center z-50 responsive_subtitle font-semibold bg-zinc-600 shadow-[0_10px_10px_-10px_rgba(0,0,0,.7)]">
+          <h2 className="text-gray-50 text-center z-50 text-5xl py-2 font-semibold bg-zinc-600 shadow-[0_10px_10px_-10px_rgba(0,0,0,.7)]">
             CONTACT US
           </h2>
         </div>

@@ -21,17 +21,18 @@ const Navbar = () => {
       >
         <div className="max-w-screen-xl flex flex-wrap h-full items-center justify-between mx-auto p-4 ">
           <Link href="/" className="flex items-center">
-            <span className="self-center text-center uppercase transition-all font-semibold whitespace-nowrap flex items-center gap-2  ml-5">
+            <span className="self-center text-center uppercase transition-all font-semibold whitespace-nowrap flex items-center gap-2 ml-3">
               <span className="bb_logo text-2xl text-zinc-50">BURGER</span>
               <Image
                 src={
-                  "https://burgerburger.s3.us-east-2.amazonaws.com/bb_logo.svg"
+                  "https://burgerburger.s3.us-east-2.amazonaws.com/logo_bb.png"
                 }
-                height={1500}
-                width={1500}
+                height={1000}
+                width={1000}
                 alt="Burger Burger Logo"
-                className="w-[30px] lg:w-[35px] -translate-y-1 lg:-translate-y-1"
+                className="w-[35px] -translate-y-[5px] md:-translate-y-1 lg:-translate-y-1"
               ></Image>
+      
               <span className="bb_logo text-2xl text-zinc-50">BURGER</span>
             </span>
           </Link>
