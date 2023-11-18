@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Big_Shoulders_Display } from "next/font/google";
+import { Viewport } from 'next'
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 
@@ -8,9 +9,15 @@ const bigShoulders = Big_Shoulders_Display({
   weight: ["200", "400", "600", "700"],
 });
 
+export const viewport: Viewport = {
+  themeColor: '#3F3F46',
+}
+
 export const metadata: Metadata = {
   title: "BURGER BURGER",
   description: "Burger Burger official website.",
+  manifest: '/manifest.json',
+  icons: {apple: '/icon.png'},
   openGraph: {
     title: "Burger Burger",
     description:
