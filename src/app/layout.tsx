@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Big_Shoulders_Display } from "next/font/google";
 import { Viewport } from 'next'
 import "./globals.css";
+import  AppInstall  from "../components/appinstall/AppInstall"
 import Navbar from "@/components/navbar/Navbar";
 
 const bigShoulders = Big_Shoulders_Display({
@@ -109,6 +110,7 @@ export default function RootLayout({
       <body className={bigShoulders.className}>
         <Navbar></Navbar>
         {children}
+       <AppInstall></AppInstall>
       </body>
     </html>
   );
