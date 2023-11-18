@@ -97,3 +97,10 @@ body {
   font-size: clamp(1rem, 3vw, 1.5rem);
   max-width: 100vw !important;
 }
+
+
+@media screen and (display-mode: standalone) {
+  .appBtn{
+    display: none;
+  }
+}

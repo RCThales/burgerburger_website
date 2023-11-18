@@ -1,28 +1,25 @@
 "use client";
-import { Blinker } from "next/font/google";
 import React, { useEffect, useState } from 'react';
-
-const blinker = Blinker({
-    subsets: ["latin"],
-    weight: ["200", "400", "600", "700"],
-  });
 
   
 const AppInstall = () => {
     const [deferredPrompt, setDeferredPrompt] = useState(null);
 
   useEffect(() => {
+
     const handleBeforeInstallPrompt = (event) => {
       event.preventDefault();
+      console.log("EVENT", event);
       setDeferredPrompt(event);
+    
     };
 
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    window?.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
 
     return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+      window?.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
     };
-  }, []);
+  }, [deferredPrompt]);
 
   const handleInstallClick = () => {
     if (deferredPrompt) {
@@ -37,10 +34,19 @@ const AppInstall = () => {
       });
     }
   };
-
+ 
   return (
-    <button  onClick={handleInstallClick} disabled={!deferredPrompt} className={`${blinker.className} cursor-pointer fixed z-[99999999999999999999] shadow-zinc-700 shadow-md hover:scale-[1.02] active:scale-[.9]
-     transition-all rounded-2xl bottom-6 right-6 h-auto text-xl font-semibold w-auto p-2 bg-[#D43300]`}>Install our app</button>
+    
+    <>
+    {deferredPrompt !== null ? 
+    <button onClick={handleInstallClick} className="appBtn cursor-pointer pl-3 pr-3 w-[85vw] md:w-auto h-14 md:h-[40px] flex justify-center items-center text-center text-zinc-50 
+     rounded-lg hover:bg-orange-600 z-[999999999999999] transition-all bg-[#D43300] uppercase">Install app</button>
+      :
+      <p className="appBtn pl-3 pr-3 w-[85vw] md:w-auto h-14 md:h-[40px] flex justify-center items-center text-center text-zinc-900 
+     rounded-lg z-[999999999999999] font-semibold transition-all bg-gray-300 uppercase">App Installed</p>}
+
+    </>
+
   )
 }
 

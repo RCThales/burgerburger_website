@@ -5,6 +5,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import useMobileMenuStore from "../../stores/mobileMenuStore"; // Adjust the path accordingly
+import AppInstall from "../appinstall/AppInstall";
 
 const MobileMenu = () => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -118,6 +119,9 @@ const MobileMenu = () => {
                     >
                       CONTACT US
                     </Link>
+                  </li>
+                  <li>
+                    <AppInstall></AppInstall>
                   </li>
                 </ul>
               </div>
