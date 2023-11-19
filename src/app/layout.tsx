@@ -71,11 +71,11 @@ export const metadata: Metadata = {
   },
   appleWebApp: {
     title: "Burger Burgert Apple Web App",
-    statusBarStyle: "black-translucent",
+    statusBarStyle: "black",
     startupImage: [
-      "https://burgerburger.s3.us-east-2.amazonaws.com/banner_bb.png",
+      "/",
       {
-        url: "https://burgerburger.s3.us-east-2.amazonaws.com/banner_bb.png",
+        url: "https://burgerburger.s3.us-east-2.amazonaws.com/logo_bb.png",
         media: "(device-width: 768px) and (device-height: 1024px)",
       },
     ],
