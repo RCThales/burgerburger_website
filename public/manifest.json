@@ -1,6 +1,6 @@
 {
     "theme_color": "#3F3F46",
-    "background_color": "rgb(9 9 11)",
+    "background_color": "#3F3F46",
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
@@ -23,5 +23,11 @@
             "sizes": "512x512",
             "type": "image/png"
         }
+    ],
+    "dir": "auto",
+    "lang": "en",
+    "orientation": "portrait",
+    "categories": [
+      "food"
     ]
 }
