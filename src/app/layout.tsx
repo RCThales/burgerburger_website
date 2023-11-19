@@ -106,10 +106,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+
       <body className={bigShoulders.className}>
         <Navbar></Navbar>
         {children}
-
       </body>
     </html>
   );

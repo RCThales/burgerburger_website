@@ -10,6 +10,7 @@ import AppInstall from "../appinstall/AppInstall";
 const MobileMenu = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const { open, pageNum, setOpen, setPageNum } = useMobileMenuStore();
+  const [update, setUpdate] = useState(0);
 
   const navbarToggle = useRef<any>();
 
@@ -24,7 +25,14 @@ const MobileMenu = () => {
 
   useEffect(() => {
     setOpenMenu(open);
+
+    if(open) {
+      setUpdate(update+1);
+
+    }
+   
   }, [open]);
+
   useEffect(() => {
     const changeNavbarWithResize = () => {
       if (window?.innerWidth >= 768) {
