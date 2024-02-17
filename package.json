@@ -1,15 +1,17 @@
 {
   "name": "burgerburger_website",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint:check": "prettier --check .",
+    "lint:fix": "prettier --write .",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^1.9.7",
     "body-parser": "^1.20.2",
     "express": "^4.18.2",
     "formik": "^2.4.5",
@@ -32,6 +34,7 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.0.1",
+    "jest": "^29.7.0",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
