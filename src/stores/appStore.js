@@ -1,5 +1,5 @@
 // appStore.js
-import { create } from 'zustand'
+import { create } from "zustand";
 
 const useAppStore = create((set) => ({
   deferredPrompt: null,

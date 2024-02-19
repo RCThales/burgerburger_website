@@ -26,11 +26,9 @@ const MobileMenu = () => {
   useEffect(() => {
     setOpenMenu(open);
 
-    if(open) {
-      setUpdate(update+1);
-
+    if (open) {
+      setUpdate(update + 1);
     }
-   
   }, [open]);
 
   useEffect(() => {
@@ -106,7 +104,7 @@ const MobileMenu = () => {
                       ORDER NOW
                     </Link>
                   </li>
-  
+
                   <li>
                     <Link
                       href="/#location"

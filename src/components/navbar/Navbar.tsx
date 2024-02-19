@@ -32,7 +32,7 @@ const Navbar = () => {
                 alt="Burger Burger Logo"
                 className="w-[35px] -translate-y-[5px] md:-translate-y-1 lg:-translate-y-1"
               ></Image>
-      
+
               <span className="bb_logo text-2xl text-zinc-50">BURGER</span>
             </span>
           </Link>

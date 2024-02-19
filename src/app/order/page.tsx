@@ -184,7 +184,9 @@ const OrderPage = () => {
                   transition={{ duration: 0.2, delay: 0 }}
                   className="flex flex-col justify-center items-center gap-6 text-xl"
                 >
-                  <p className={`${blinker.className} translate-y-[40px] text-zinc-50`}>
+                  <p
+                    className={`${blinker.className} translate-y-[40px] text-zinc-50`}
+                  >
                     YOU&apos;RE JUST A CLICK AWAY!
                   </p>
                   <div
@@ -229,8 +231,9 @@ const OrderPage = () => {
                 Begin your burger adventure here!{" "}
               </span>{" "}
               <br />
-              <br />Savour the flavor of our fresh meat burgers for a
-              delicious, juicy bite!
+              <br />
+              Savour the flavor of our fresh meat burgers for a delicious, juicy
+              bite!
             </p>
 
             <div className="h-[220px]"></div>

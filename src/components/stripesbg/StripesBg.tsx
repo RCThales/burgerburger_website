@@ -1,6 +1,6 @@
 "use client";
-import { motion } from 'framer-motion';
-import React from 'react'
+import { motion } from "framer-motion";
+import React from "react";
 
 const StripesBg = () => {
   return (
@@ -49,6 +49,6 @@ const StripesBg = () => {
       ></motion.div>
     </div>
   );
-}
+};
 
-export default StripesBg
+export default StripesBg;

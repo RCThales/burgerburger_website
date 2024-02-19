@@ -4,7 +4,6 @@ import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-
 const GrindDaily = () => {
   return (
     <section className="pt-14 lg:pt-10 pb-10 bg-gray-50 overflow-hidden">

@@ -3,7 +3,6 @@ import React from "react";
 import AppInstall from "../appinstall/AppInstall";
 
 const Desktop_Menu = () => {
-
   return (
     <>
       {/* DESKTOP */}
@@ -52,7 +51,6 @@ const Desktop_Menu = () => {
           </li>
         </ul>
       </div>
-
     </>
   );
 };

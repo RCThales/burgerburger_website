@@ -26,6 +26,7 @@ npm start
 - Webapp option for mobile and desktop devices
 
 ## Features Under construction
+
 - Menu
 
 ## Order Overview
@@ -40,7 +41,6 @@ npm start
 
 ![BurgerBurger Website](https://burgerburger.s3.us-east-2.amazonaws.com/BurgerBurger_gif_3.gif)
 
-
 ## Tech Stack
 
 [![Next.js](https://img.shields.io/badge/Next.js-%23404d59?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
@@ -54,11 +54,9 @@ npm start
 
 The captivating design and user experience of Burger Burger were meticulously crafted by Rayssa Ruas.
 
-
 ## Explore the live website
 
 [![Website](https://img.shields.io/badge/Visit%20Website-%2341B883?style=for-the-badge)](https://burgerburger.vercel.app/)
-
 
 ## License
 

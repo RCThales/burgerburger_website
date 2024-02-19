@@ -1,10 +1,8 @@
-
 import React from "react";
 import HeroBurger from "../HeroBurger/HeroBurger";
 import StripesBg from "../stripesbg/StripesBg";
 import HeroInfoSide from "../heroinfoside/HeroInfoSide";
 import HeroMobileTitle from "../heromobiletitle/HeroMobileTitle";
-
 
 const Hero = () => {
   return (

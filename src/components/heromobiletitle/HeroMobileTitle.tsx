@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from 'framer-motion';
-import React from 'react'
+import { motion } from "framer-motion";
+import React from "react";
 
 const HeroMobileTitle = () => {
   return (
@@ -24,6 +24,6 @@ const HeroMobileTitle = () => {
       </motion.strong>
     </motion.h1>
   );
-}
+};
 
-export default HeroMobileTitle
+export default HeroMobileTitle;
