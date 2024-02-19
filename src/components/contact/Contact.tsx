@@ -14,6 +14,13 @@ const blinker = Blinker({
   weight: ["200", "400", "600", "700"],
 });
 
+interface FormValues {
+  firstName: string;
+  lastName: string;
+  email: string;
+  message: string;
+}
+
 const validationSchema = Yup.object().shape({
   firstName: Yup.string(),
   lastName: Yup.string(),
@@ -32,12 +39,11 @@ const initialValues = {
 
 const Contact = () => {
   const [emailSent, setEmailSent] = useState(false);
-  const handleSubmit = (values: any) => {
-    // Handle form submission logic here
+  const handleSubmit = (values: FormValues) => {
     sendEmail(values);
   };
 
-  const sendEmail = async (values: any) => {
+  const sendEmail = async (values: FormValues) => {
     try {
       const response = await fetch("/api/sendemail", {
         method: "POST",
