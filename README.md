@@ -3,21 +3,70 @@
     <h2>This project is the official website for BurgerBurger, a gourmet burger restaurant. It serves as an online platform to showcase how to order from their shop, and provide information about our locations and contact details.</h2>
 </div>
 
+## Prerequisites
+
+Before installing, ensure you have the following:
+- Node.js
+
 ## Installation
 
-To install the necessary dependencies, run the following command:
+Clone the repository and install dependencies:
 
 ```bash
+git clone https://github.com/RCThales/burgerburger_website.git
+cd burgerburger_website
 npm install
 ```
 
 ## Running the Website
 
-To start the website locally, run:
+- To start the development server:
+
+  ```bash
+  npm run dev
+  ```
+
+- To build the project for production:
+
+  ```bash
+  npm run build
+  ```
+
+- To run the production build:
+
+  ```bash
+  npm start
+  ```
+
+## Running Tests
+
+To run the test suite with Jest:
 
 ```bash
-npm start
+npm test
 ```
+
+To watch tests during development:
+
+```bash
+npm run test:watch
+```
+
+## Linting
+
+Ensure your code meets our style standards:
+
+- To check for linting errors:
+
+  ```bash
+  npm run lint:check
+  ```
+
+- To automatically fix linting errors:
+
+  ```bash
+  npm run lint:fix
+  ```
 
 ## Features
 
@@ -25,23 +74,25 @@ npm start
 - Contact form and location information
 - Webapp option for mobile and desktop devices
 
-## Features Under construction
+## Features Under Construction
 
 - Menu
 
-## Order Overview
+## Visual Overview
+
+### Order Overview
 
 ![BurgerBurger Website](https://burgerburger.s3.us-east-2.amazonaws.com/BurgerBurger_gif_1.gif)
 
-## Contact Overview
+### Contact Overview
 
 ![BurgerBurger Website](https://burgerburger.s3.us-east-2.amazonaws.com/BurgerBurger_gif_2.gif)
 
-## Web App Demonstration
+### Web App Demonstration
 
 ![BurgerBurger Website](https://burgerburger.s3.us-east-2.amazonaws.com/BurgerBurger_gif_3.gif)
 
-## Tech Stack
+### Tech Stack
 
 [![Next.js](https://img.shields.io/badge/Next.js-%23404d59?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React-%2320232a?style=for-the-badge&logo=react&logoColor=%2361DAFB)](https://reactjs.org/)
@@ -50,11 +101,11 @@ npm start
 [![Amazon S3](https://img.shields.io/badge/Amazon%20S3-%23404d59?style=for-the-badge&logo=amazon-s3&logoColor=white)](https://aws.amazon.com/s3/)
 [![Jest](https://img.shields.io/badge/Jest-%23C21325?style=for-the-badge&logo=jest&logoColor=white)](https://jestjs.io/)
 
-## Design and UX
+### Design and UX
 
 The captivating design and user experience of Burger Burger were meticulously crafted by Rayssa Ruas.
 
-## Explore the live website
+### Explore the live website
 
 [![Website](https://img.shields.io/badge/Visit%20Website-%2341B883?style=for-the-badge)](https://burgerburger.vercel.app/)
 
