@@ -3,7 +3,6 @@ import { Blinker } from "next/font/google";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
-import useMobileMenuStore from "../../stores/mobileMenuStore"; // Adjust the path accordingly
 
 const blinker = Blinker({
   subsets: ["latin"],
@@ -11,13 +10,6 @@ const blinker = Blinker({
 });
 
 const HeroInfoSide = () => {
-  const { open, setOpen, setPageNum } = useMobileMenuStore();
-
-  const openOrderMenu = () => {
-    setPageNum(2);
-    setOpen(!open);
-  };
-
   return (
     <>
       <div className="flex justify-center items-center w-screen lg:w-[60%] gap-10 flex-col">
