@@ -13,21 +13,30 @@ const MobileMenu = () => {
   const navbarToggle = useRef<HTMLDivElement | null>(null);
   const DESKTOP_MIN_SIZE = 768;
 
-  useEffect(() => {
-    const closeNavbarByResizingTheWindow = () => {
-      if (window?.innerWidth >= DESKTOP_MIN_SIZE) {
-        setMobileMenuOpen(false);
+  useEffect(
+    function handleWindowResizingOnMobile() {
+      if (isMobileMenuOpen) {
+        window?.addEventListener(
+          "resize",
+          closeMobileNavbarByResizingTheWindow
+        );
       }
-    };
 
-    if (isMobileMenuOpen) {
-      window?.addEventListener("resize", closeNavbarByResizingTheWindow);
+      return () => {
+        window?.removeEventListener(
+          "resize",
+          closeMobileNavbarByResizingTheWindow
+        );
+      };
+    },
+    [isMobileMenuOpen]
+  );
+
+  const closeMobileNavbarByResizingTheWindow = () => {
+    if (window?.innerWidth >= DESKTOP_MIN_SIZE) {
+      setMobileMenuOpen(false);
     }
-
-    return () => {
-      window?.removeEventListener("resize", closeNavbarByResizingTheWindow);
-    };
-  }, [isMobileMenuOpen]);
+  };
 
   const toggleNavbar = () => {
     setMobileMenuOpen(!isMobileMenuOpen);
